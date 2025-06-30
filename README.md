@@ -1,3 +1,13 @@
+# EATLAB - YOLOv12 + OpenCV + DeepSORT Containerized Inference
+
+This project provides a containerized setup for real-time object detection and tracking using:
+
+- **YOLOv12** for object detection  
+- **OpenCV** for video processing  
+- **DeepSORT** for object tracking  
+
+## 🗂️ Project Structure
+
 <pre> ```text EATLAB/ │ ├── Dockerfile # Docker configuration for building YOLO + OpenCV + DeepSort 
   ├── docker-compose.yml # Docker Compose file for running inference in a container 
   ├── requirements.txt # Python dependencies for the project 
@@ -23,3 +33,5 @@ Make sure Docker and Docker Compose are installed.
 
 ```bash
 docker-compose up --build
+```
+Link checkpoints: https://drive.google.com/drive/folders/1jCxltMfA4IINkmNYp1rrz10AjiX7tbR5?usp=sharing
