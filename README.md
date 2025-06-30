@@ -1,39 +1,22 @@
-# 🍕 EATLAB - Pizza Detection & Tracking bằng YOLOv8 + DeepSort
-
-Hệ thống này sử dụng YOLOv12 và DeepSort để phát hiện và theo dõi pizza trong video giám sát. Triển khai dễ dàng bằng Docker Compose.
-
----
-
-## 📂 Cấu trúc thư mục
-
 EATLAB/
 │
-├── Dockerfile # Docker build YOLO + OpenCV + DeepSort
-├── docker-compose.yml # Chạy inference qua container
-├── requirements.txt # Các thư viện Python cần cài
-├── inference.py # Script chính để detect & track
-├── inference.ipynb # Script chính để detect & track
+├── Dockerfile              # Docker configuration for building YOLO + OpenCV + DeepSort
+├── docker-compose.yml      # Docker Compose file for running inference in a container
+├── requirements.txt        # Python dependencies for the project
+├── inference.py            # Main script for detection and tracking
+├── inference.ipynb         # Jupyter notebook for detection and tracking
 │
-├── yolov12m-cam1/ # Thư mục chứa model YOLO huấn luyện (ví dụ)
-│ └── yolov12m-cam13/
-│ └── weights/
-│ └── best.pt
-├── yolov12m-cam2/ # Thư mục chứa model YOLO huấn luyện (ví dụ)
-│ └── yolov12m-cam26/
-│ └── weights/
-│ └── best.pt
-...
+├── yolov12m-cam1/         # Directory for YOLO model trained for camera 1
+│   └── weights/
+│       └── best.pt        # Pre-trained YOLOv12 weights for camera 1
+├── yolov12m-cam2/         # Directory for YOLO model trained for camera 2
+│   └── weights/
+│       └── best.pt        # Pre-trained YOLOv12 weights for camera 2
+│...
+├── output/                # (Optional) Directory for saving output frames or logs
+│   └── frames/            # Directory for output video frames
 │
-├── output/ # (tuỳ chọn) Frame hoặc log output
-│ └── frames/
-│
-└── README.md # Tài liệu này
-
----
-
-## 🚀 Hướng dẫn chạy
-
-### 1. Build và chạy container
+└── README.md              # Project documentation
 
 ```bash
 docker-compose up --build
