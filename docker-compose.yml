@@ -1,0 +1,10 @@
+version: "3.10"
+
+services:
+  tracker:
+    build: .
+    container_name: EATLAB
+    volumes:
+      - ./videos:/app/dataset
+      - ./weights:/app/runs/train
+    command: python inference.py --video 1
